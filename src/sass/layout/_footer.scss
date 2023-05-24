@@ -1,0 +1,105 @@
+@use './../utils' as *;
+@use './../components' as *;
+
+.footer {
+  padding: rem(40px);
+  position: relative;
+  background-color: black;
+  color: rgba(white, 0.8);
+
+  @include desktop {
+    height: rem(400px);
+  }
+
+  &-container {
+    @include boxSizeMax(1200px);
+
+    @include desktop {
+      position: relative;
+    }
+  }
+
+  &-heading {
+    display: block;
+    padding: rem(30px) 0;
+    @include mobile {
+      font-size: rem(20px);
+      padding-left: rem(16px);
+    }
+
+    @include desktop {
+      margin-top: rem(-12px);
+      font-size: rem(24px);
+    }
+  }
+
+  &-address {
+    span {
+      display: block;
+      padding: rem(15px) 0;
+      font-size: rem(14px);
+    }
+
+    @include mobile {
+      margin-top: rem(32px);
+
+      span {
+        padding-left: rem(16px);
+      }
+    }
+
+    @include desktop {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+    }
+  }
+
+  @at-root .address__telephone {
+    @include mobile {
+      margin-left: rem(8px);
+    }
+  }
+
+  &-sns {
+    position: relative;
+    @include flexbox(column);
+    margin: rem(32px) 0;
+    padding: rem(16px) 0;
+    padding-left: rem(16px);
+    gap: rem(20px);
+
+    &-heading {
+      @include desktop {
+        display: block;
+      }
+    }
+    .fab {
+      font-size: rem(50px);
+      margin-right: rem(10px);
+    }
+
+    @include desktop {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &-copyright {
+    line-height: rem(24px);
+    font-size: rem(14px);
+    word-break: keep-all;
+    @include mobile {
+      display: block;
+      padding-left: rem(16px);
+    }
+
+    @include desktop {
+      position: absolute;
+      width: rem(240px);
+      top: 300%;
+      left: 35%;
+    }
+  }
+}

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="free gallery" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyoungkuk's Gallery</title>
+    <!-- 사이트 디자인 템플릿 출처 : https://velog.io/@heelieben -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/titleLogo.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="splash"></div>
+      <div class="splash__text" aria-hidden="true">
+        <span aria-hidden="true">청춘을 기록하는</span>
+        <span aria-hidden="true">김경국의 개인 Gallery</span>
+      </div>
+      <header class="header is-top">
+        <div class="header__container">
+          <h1>
+            <a class="header__link" href="#Greeting">
+              <img
+                class="header__logo"
+                src="./assets/images/logo.svg"
+                alt="FREE GALLERY"
+                width="344"
+                height="34"
+              />
+            </a>
+          </h1>
+          <div class="header__bg">
+            <div class="header__bg__cat"></div>
+          </div>
+          <button class="header__menu" aria-label="메뉴 열기">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
+      <nav class="nav is-top">
+        <ul class="nav__list">
+          <li class="nav__link">
+            <a href="#Intro">About</a>
+          </li>
+          <li class="nav__link">
+            <a href="#News">새소식</a>
+          </li>
+          <li class="nav__link">
+            <a href="#Gallery">갤러리 둘러보기</a>
+          </li>
+          <li class="nav__link">
+            <a href="#BestPhoto">인기 사진</a>
+          </li>
+        <button class="nav__close" aria-label="메뉴 닫기">
+          <i class="fas fa-times"></i>
+        </button>
+      </nav>
+      <main class="main">
+        <section id="Greeting" class="greeting">
+          <h2 class="greeting__heading a11yHidden">Kyoungkuk's gallery Welcome 영상</h2>
+          <div class="greeting__videoContainer">
+            <video class="greeting__video" muted playsinline loop autoplay>
+              <source src="assets/video/main_video.webm" type="video/webm" />
+              <source src="assets/video/main_video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <span class="greeting__slogan">
+            Cinematic<br /><strong>Film</strong><br />Gallery</span
+          >
+          <button class="greeting__button" aria-label="영상 재생 또는 멈춤">
+            <i class="play fas fa-pause"></i>
+          </button>
+        </section>
+        <section id="Intro" class="intro">
+          <h2 class="intro__heading a11yHidden">About</h2>
+          <div class="intro-container">
+            <div class="intro-videoContainer">
+              <video muted playsinline loop autoplay>
+                <source
+                  src="assets/video/Photographer.webm"
+                  type="video/webm"
+                />
+                <source src="assets/video/Photographer.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="intro__text">
+              <span class="headAnimation">세상의 <strong>오직 하나 뿐인</strong></span> 
+              <span class="headAnimation">시네마틱 영상</span>
+              <p class="headAnimation">
+                취미로 Cinematic Film을<br />
+                제작하여 업로드하는<br />
+                추억 저장용 사이트입니다.
+              </p>
+              <a href="#watchPic"
+                ><span id="watchPic">사진 및 영상 보러가기</span
+                ><i class="fas fa-images fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="News" class="news">
+          <div class="news__container">
+            <h2 class="news__heading">
+              <span class="news__heading--line headAnimation">새소식</span>
+            </h2>
+            <ul class="news__article-list">
+              <li class="news__article-item">
+                <a href="#Article1">
+                  <article id="Article1" class="news__article">
+                    <h3 class="news__article--title">강릉 여행 영상</h3>
+                    <p class="news__article--body">
+                      24살, 친구들과 첫 번째 여행
+                    </p>
+                    <small class="news__article--date">2023.2.22 ~ 2023. 2. 24</small>
+                    <figure class="news__article--imageContainer">
+                      <img
+                        src="./assets/images/news1.jpg"
+                        alt="사진 설명"
+                        class="news__article--image"
+                        width="1000"
+                        height="667"
+                      />
+                    </figure>
+                  </article>
+                </a>
+              </li>
+              <li class="news__article-item">
+                <a href="#Article2">
+                  <article id="Article2" class="news__article">
+                    <h3 class="news__article--title">TEST</h3>
+                    <p class="news__article--body">
+                      This is Test Description for developing my own site
+                    </p>
+                    <small class="news__article--date">2023-07-00</small>
+                    <figure class="news__article--imageContainer">
+                      <img
+                        src="./assets/images/news2.jpg"
+                        alt="사진 설명"
+                        class="news__article--image"
+                        width="1000"
+                        height="667"
+                      />
+                    </figure>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="BestPhoto" class="bestPhoto">
+          <div class="bestPhoto__container">
+            <h2 class="bestPhoto__heading headAnimation">
+              <span class="bestPhoto__heading--line headAnimation"
+                >Popular Film & Pic</span
+              >
+            </h2>
+            <span class="bestPhoto__detail">
+              방문객들에게 가장 인기가 많았던 영상과 사진을 둘러보세요.
+            </span>
+            <div class="bestPhoto__imgContainer">
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button1" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily1.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/default.png"
+                      width="640"
+                      height="480"
+                      data-src="./assets/images/daily1.jpg"
+                      loading="lazy"
+                      alt="양말이 걸려있는 의자"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="modal modal1"
+                role="dialog"
+                aria-labelledby="title-dialog1"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog1" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily1.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./assets/images/default.png"
+                        width="640"
+                        height="480"
+                        data-src="./assets/images/daily1.jpg"
+                        loading="lazy"
+                        alt="양말이 걸려있는 의자"
+                      />
+                    </picture>
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">우리가족</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close1"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button2" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily2.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      width="640"
+                      height="480"
+                      data-src="./assets/images/daily2.jpg"
+                      alt="전봇대와 구름"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="modal modal2"
+                role="dialog"
+                aria-labelledby="title-dialog2"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog2" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily2.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily2.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        width="640"
+                        height="480"
+                        data-src="./assets/images/daily2.jpg"
+                        alt="전봇대와 구름"
+                      />
+                    </picture>
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">하늘하늘</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close2"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button3" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily3.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      width="640"
+                      height="480"
+                      data-src="./assets/images/daily3.jpg"
+                      alt="커피, 책, 볼펜, 식물"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="modal modal3"
+                role="dialog"
+                aria-labelledby="title-dialog3"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog3" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily3.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily3.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        width="640"
+                        height="480"
+                        data-src="./assets/images/daily3.jpg"
+                        alt="커피, 책, 볼펜, 식물"
+                      />
+                    </picture>
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">여유</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close3"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button4" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily4.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily4.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      width="640"
+                      height="480"
+                      data-src="./assets/images/daily4.jpg"
+                      alt="어두운 분위기의 작업실 모습"
+                    />
+                  </picture>
+                </a>
+              </div>
+              <div
+                class="modal modal4"
+                role="dialog"
+                aria-labelledby="title-dialog4"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog4" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily4.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily4.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        width="640"
+                        height="480"
+                        data-src="./assets/images/daily4.jpg"
+                        alt="어두운 분위기의 작업실 모습"
+                      />
+                    </picture>
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">작업실</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close4"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="Gallery" class="gallery">
+          <h2 class="gallery__heading a11yHidden">Kyoungkuk's Gallery 모음</h2>
+          <div class="gallery__container">
+            <div class="gallery__bg"></div>
+            <div class="gallery__slogan">
+              <span class="slogan__lg headAnimation"
+                >My<br />Favorite<br /><strong>PICS</strong></span
+              ><br />
+              <span class="slogan__sm headAnimation"
+                >갤러리의<br />다채로움을
+                경험해보세요.</span
+              >
+            </div>
+            <ul class="gallery__slide">
+              <li class="gallery__blank"></li>
+              <li class="gallery__photo ph1">
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  data-src="./assets/images/airflight.jpg"
+                  alt="airflight"
+                />
+              </li>
+              <li class="gallery__photo ph2">
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  data-src="./assets/images/test_pic.jpg"
+                  alt="test"
+                />
+              </li>
+              <li class="gallery__photo ph3">
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  data-src="./assets/images/test_pic.jpg"
+                  alt="test"
+                />
+              </li>
+              <li class="gallery__photo ph4">
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  data-src="./assets/images/sunset.jpg"
+                  alt="sunset"
+                />
+              </li>
+              <li class="gallery__photo ph5">
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  data-src="./assets/images/code.jpg"
+                  alt="코드가 적혀있는 컴퓨터 화면"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="Register" class="register">
+          <div class="register__box">
+            <h2 class="register__heading headAnimation">
+              <span class="register__heading--line">이미지 업로드</span>
+            </h2>
+            <p class="register__detail">
+              당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과
+              공유할 수 있습니다.
+            </p>
+            <div class="register__container">
+              <form action="#" class="register__formbox" method="POST">
+                <fieldset>
+                  <legend class="register__heading a11yHidden">
+                    이미지 업로드 폼 양식
+                  </legend>
+                  <ul class="register__list">
+                    <li class="register__item">
+                      <label for="Name" class="a11yHidden">작성자 이름</label>
+                      <input
+                        type="text"
+                        id="Name"
+                        name="name"
+                        class="register__item--name"
+                        placeholder="이름을 입력해주세요"
+                      />
+                    </li>
+                    <li class="register__item">
+                      <label for="Explain" class="a11yHidden">사진 설명</label>
+                      <textarea
+                        id="Explain"
+                        name="explain"
+                        rows="5"
+                        class="register__item--explain"
+                        placeholder="사진에 대해 간단히 설명해주세요"
+                      ></textarea>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#친구"
+                      >
+                        #친구
+                      </button>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#가족"
+                      >
+                        #가족
+                      </button>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#생일"
+                      >
+                        #생일
+                      </button>
+                    </li>
+                    <li class="register__item">
+                      <label
+                        for="File"
+                        class="register__item--upload"
+                        tabindex="0"
+                        >파일 업로드</label
+                      >
+                      <input
+                        type="file"
+                        id="File"
+                        class="register__item--file"
+                        accept="image/*"
+                        tabindex="0"
+                      />
+                    </li>
+                  </ul>
+                  <button class="register__button">공유하기</button>
+                </fieldset>
+              </form>
+              <div class="register__thumbnail-container">
+                <img
+                  class="register__thumbnail"
+                  src="./assets/images/default.png"
+                  width="640"
+                  height="480"
+                  alt="업로드 썸네일 이미지"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-container">
+          <span class="footer-heading">Kyoungkuk's GALLERY</span>
+          <address class="footer-address">
+            <span
+              ><a class="address__link" href="rudrnr0324@gmail.com"
+                >My Email</a
+              ></span
+            >
+          </address>
+          <div class="footer-sns">
+            <span class="footer-sns-heading">Follow us</span>
+            <div class="sns-wrap">
+              <a href="https://www.instagram.com/3k__kookie/"
+                ><span class="a11yHidden">인스타그램</span
+                ><i id="Instagram" class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/Cr0nu3"
+                ><span class="a11yHidden">깃허브</span
+                ><i id="Github" class="fab fa-github"></i
+              ></a>
+              <a href="https://www.youtube.com/channel/UCwp-EyhPLG9KreooZkr-BYQ"
+                ><span class="a11yHidden">유튜브</span
+                ><i id="Youtube" class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <small class="footer-copyright">
+            Copyright since &copy; 2023 by Kyoungkuk's Gallery CORPORATION ALL RIGHTS
+            RESERVED.
+          </small>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

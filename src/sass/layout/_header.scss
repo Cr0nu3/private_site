@@ -1,0 +1,71 @@
+@use './../utils' as *;
+@use './../components' as *;
+
+.header {
+  transition: all 0.2s ease;
+  @at-root .header.is-top {
+    transform: translateY(-100%);
+  }
+  &__container {
+    @include boxSizeMax(1200px);
+    width: 100%;
+    position: relative;
+    @include flexbox(row, center, center);
+  }
+
+  // 공통
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(white, 0.9);
+  @include flexbox(row, center, center);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
+  &__logo {
+    // @include responsive;
+    height: rem(40px);
+    padding: rem(10px);
+  }
+
+  // 메뉴 버튼
+  &__menu {
+    display: block;
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    transform: translateY(5%);
+    right: rem(20px);
+    top: rem(8px);
+    font-size: rem(25px);
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
+
+  &__menu.is-active {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  // 데스크탑
+  @include desktop {
+    height: rem(80px);
+
+    &__bg {
+      &__cat {
+        @include walkingCat {
+          position: absolute;
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  // 모바일
+  @include mobile {
+    height: rem(80px);
+    min-width: rem(320px);
+  }
+}
